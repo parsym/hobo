@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bookings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>User</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Discount</th>
+      <th>Total amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.room_information.room_type %></td>
+        <td><%= booking.user.email %></td>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.end_date %></td>
+        <td><%= booking.discount %></td>
+        <td><%= booking.total_amount %></td>
+        <td><%= link_to 'Show', booking %></td>
+        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <tr>
+      <th>Booking id</th>
+      <th>Room type id</th>
+      <th>booked date</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% BookRef.all.each do |ref| %>
+    <tr>
+      <td><%=ref.booking_id%></td>
+      <td><%=ref.room_information_id%></td>
+      <td><%=ref.booked_date%></td>
+    </tr>
+  </tbody>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Booking', new_booking_path %>

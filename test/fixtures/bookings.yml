@@ -1,0 +1,17 @@
+# # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bookA01:
+  room_information_id: deluxe_room
+  user_id: user
+  start_date: 2016-06-22
+  end_date: 2016-06-23
+  discount: 0
+  total_amount: 10
+
+# two:
+#   room_id: 
+#   user_id: 
+#   start_date: 2016-06-22
+#   end_date: 2016-06-22
+#   discount: 1
+#   total_amount: 9.99

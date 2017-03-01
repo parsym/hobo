@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+room_A01:
+  room_number: A01
+  room_information_id: deluxe_room 
+
+room_A02:
+  room_number: A02
+  room_information_id: deluxe_room 
+# two:
+#   room_information_id: 

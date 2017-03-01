@@ -1,0 +1,7 @@
+<h1>New Booking</h1>
+
+<%= render 'form' %>
+<% if user_signed_in? %>
+<%= render 'active_booking' %>
+<%end%>
+<%= link_to 'Back', bookings_path %>

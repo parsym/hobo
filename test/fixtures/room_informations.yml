@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+deluxe_room:
+  room_type: Deluxe Room
+  description: Queen Size Bed
+  price: 7000
+
+luxury_room:
+  room_type: Luxury Room
+  description: Queen Size Bed and Pool Facing
+  price: 8500
+
+luxury_suite:
+  room_type: Luxury Suite
+  description: King Size Bed and Pool Facing
+  price: 12000
+
+presidential_suite:
+  room_type: Presidential Suite
+  description: King Size Bed, Pool Facing with a Gym
+  price: 20000

@@ -1,0 +1,48 @@
+<h3> active bookings </h3>
+<% if active_bookings.any? %>
+<table>
+<thead>
+	<th>Room type</th>
+	<th>Start date</th>
+	<th>End date</th>
+	<th>Quantity</th>
+</thead>
+<tbody>
+<% active_bookings.each do |booking|%>
+<tr>
+	<td><%= booking.room_information.room_type %></td>
+	<td><%= booking.start_date %></td>
+	<td><%= booking.end_date %></td>
+	<td><%=booking.quantity%></td>
+	<td><%= link_to "check/edit" ,booking_path(booking)%>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%else%>
+No current booking found
+<%end%>
+
+<h3> Historical data </h3>
+<% if expired_bookings.any? %>
+<table>
+<thead>
+	<th>Room type</th>
+	<th>Start date</th>
+	<th>End date</th>
+</thead>
+<tbody>
+<% expired_bookings.each do |booking|%>
+<tr>
+	<td><%= booking.room_information.room_type %></td>
+	<td><%= booking.start_date %></td>
+	<td><%= booking.end_date %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%else%>
+No historical data found
+<%end%>
+<br>
+<br>
